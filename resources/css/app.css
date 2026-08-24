@@ -3,7 +3,111 @@
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
+/* Self-hosted fonts — never hotlinked. See CLAUDE.md §4. */
+
+@font-face {
+    font-family: 'Archivo';
+    src: url('/fonts/archivo/archivo-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Archivo';
+    src: url('/fonts/archivo/archivo-500.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Archivo';
+    src: url('/fonts/archivo/archivo-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Archivo';
+    src: url('/fonts/archivo/archivo-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('/fonts/ibm-plex-mono/ibm-plex-mono-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('/fonts/ibm-plex-mono/ibm-plex-mono-500.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    /* Brand colour — the only place colour is defined. See CLAUDE.md §4. */
+    --color-ink: #101b26;
+    --color-deep: #22303e;
+    --color-body: #3e464f;
+    --color-accent: #1c6fb4;
+    --color-accent-2: #6fb8e8;
+    --color-paper: #f2f3f4;
+    --color-line: #cbd1d4;
+
+    --color-defense: #3e6b54;
+    --color-defense-dark: #1e3a2c;
+
+    /* Typography */
+    --font-sans:
+        'Archivo', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
+    --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+    /* Type scale — 12 / 14 / 16 / 19 / 24 / 32 / 44 / 64 */
+    --text-xs: 0.75rem;
+    --text-xs--line-height: 1.5;
+    --text-sm: 0.875rem;
+    --text-sm--line-height: 1.5;
+    --text-base: 1rem;
+    --text-base--line-height: 1.65;
+    --text-lg: 1.1875rem;
+    --text-lg--line-height: 1.5;
+    --text-xl: 1.5rem;
+    --text-xl--line-height: 1.3;
+    --text-2xl: 2rem;
+    --text-2xl--line-height: 1.2;
+    --text-3xl: 2.75rem;
+    --text-3xl--line-height: 1.1;
+    --text-4xl: 4rem;
+    --text-4xl--line-height: 1.05;
+
+    --tracking-mono-label: 0.12em;
+}
+
+/* sector-defense body class substitutes two tokens only — see CLAUDE.md §4 */
+.sector-defense {
+    --color-ink: var(--color-defense-dark);
+    --color-accent: var(--color-defense);
+}
+
+@layer base {
+    body {
+        font-family: var(--font-sans);
+        background-color: var(--color-paper);
+        color: var(--color-body);
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-accent);
+        outline-offset: 2px;
+    }
 }
