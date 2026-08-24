@@ -448,17 +448,17 @@ Not optional, and not to be announced in comments:
 
 Work in this sequence and stop for review after each numbered step.
 
-1. Tailwind theme with §4 tokens, self-hosted fonts, base layout, header, footer
-2. Blade components: button, section heading, mono label, card, data cell, path-profile SVG
-3. Home page
-4. Services page
-5. Sector page template + the five sector pages
-6. Founder page
-7. Credentials page
-8. Contact page, form request, mailables, `Enquiry` model and migration
-9. Filament `EnquiryResource` + dashboard widget
-10. `Note` model, migration, `NoteResource` + dashboard widget
-11. Security middleware, headers, rate limiting, robots, sitemap
-12. Accessibility and responsive pass
+1. [x] Tailwind theme with §4 tokens, self-hosted fonts, base layout, header, footer
+2. [x] Blade components: button, section heading, mono label, card, data cell, path-profile SVG
+3. [ ] Home page
+4. [ ] Services page
+5. [ ] Sector page template + the five sector pages
+6. [ ] Founder page
+7. [ ] Credentials page
+8. [ ] Contact page, form request, mailables, `Enquiry` model and migration
+9. [ ] Filament `EnquiryResource` + dashboard widget
+10. [ ] `Note` model, migration, `NoteResource` + dashboard widget
+11. [ ] Security middleware, headers, rate limiting, robots, sitemap
+12. [ ] Accessibility and responsive pass
 
 After each step, list any `[TODO:]` markers you left so the developer can collect them.
