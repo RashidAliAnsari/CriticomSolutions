@@ -450,7 +450,7 @@ Work in this sequence and stop for review after each numbered step.
 
 1. [x] Tailwind theme with §4 tokens, self-hosted fonts, base layout, header, footer
 2. [x] Blade components: button, section heading, mono label, card, data cell, path-profile SVG
-3. [ ] Home page
+3. [x] Home page
 4. [ ] Services page
 5. [ ] Sector page template + the five sector pages
 6. [ ] Founder page
