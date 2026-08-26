@@ -65,6 +65,7 @@
 
     --color-defense: #3e6b54;
     --color-defense-dark: #1e3a2c;
+    --color-defense-accent-2: #88baa0; /* same hue/sat as --color-defense, lightened to match the accent/accent-2 relationship; ~5.6:1 against --color-defense-dark */
 
     /* Typography */
     --font-sans:
@@ -93,10 +94,11 @@
     --tracking-mono-label: 0.12em;
 }
 
-/* sector-defense body class substitutes two tokens only — see CLAUDE.md §4 */
+/* sector-defense body class substitutes three tokens only — see CLAUDE.md §4 */
 .sector-defense {
     --color-ink: var(--color-defense-dark);
     --color-accent: var(--color-defense);
+    --color-accent-2: var(--color-defense-accent-2);
 }
 
 @layer base {

@@ -1,6 +1,7 @@
 @props([
     'title' => null,
     'description' => null,
+    'bodyClass' => null,
 ])
 
 <!DOCTYPE html>
@@ -25,7 +26,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="flex min-h-screen flex-col bg-paper text-body antialiased">
+<body class="flex min-h-screen flex-col bg-paper text-body antialiased {{ $bodyClass }}">
     <a
         href="#main-content"
         class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-ink focus:px-4 focus:py-2 focus:text-paper"

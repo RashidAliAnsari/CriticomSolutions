@@ -101,6 +101,7 @@ variables. Swapping palette must mean editing this block and nothing else.
 
     --color-defense: #3e6b54; /* defense sector page only */
     --color-defense-dark: #1e3a2c; /* defense sector page only */
+    --color-defense-accent-2: #88baa0; /* defense sector page only — accent-2 on dark */
 }
 ```
 
@@ -118,9 +119,12 @@ element sits on, use `--color-ink` on paper and `--color-paper` on dark.
 adjacent to it as a surface.
 
 On the defense page, `--color-defense-dark` substitutes for `--color-ink` on dark
-sections, and `--color-defense` substitutes for `--color-accent` on light. Nothing else
-changes — same layout, same components, same type. The swap is done with a body class
-(`sector-defense`) overriding those two variables, not with duplicated components.
+sections, `--color-defense` substitutes for `--color-accent` on light, and
+`--color-defense-accent-2` substitutes for `--color-accent-2` on dark (buttons, mono
+labels, links that would otherwise render in system blue against the green sections).
+Nothing else changes — same layout, same components, same type. The swap is done with a
+body class (`sector-defense`) overriding those three variables, not with duplicated
+components.
 
 ### Typography
 
@@ -452,7 +456,7 @@ Work in this sequence and stop for review after each numbered step.
 2. [x] Blade components: button, section heading, mono label, card, data cell, path-profile SVG
 3. [x] Home page
 4. [x] Services page
-5. [ ] Sector page template + the five sector pages
+5. [x] Sector page template + the five sector pages
 6. [ ] Founder page
 7. [ ] Credentials page
 8. [ ] Contact page, form request, mailables, `Enquiry` model and migration
