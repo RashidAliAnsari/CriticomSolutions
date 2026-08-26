@@ -457,7 +457,7 @@ Work in this sequence and stop for review after each numbered step.
 3. [x] Home page
 4. [x] Services page
 5. [x] Sector page template + the five sector pages
-6. [ ] Founder page
+6. [x] Founder page
 7. [ ] Credentials page
 8. [ ] Contact page, form request, mailables, `Enquiry` model and migration
 9. [ ] Filament `EnquiryResource` + dashboard widget

@@ -17,3 +17,7 @@ Route::get('/sectors/{slug}', function (string $slug) {
 
     return view('sectors.show', compact('sector'));
 })->name('sectors.show');
+
+Route::get('/founder', function () {
+    return view('founder');
+})->name('founder');
