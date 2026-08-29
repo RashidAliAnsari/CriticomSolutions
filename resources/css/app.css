@@ -101,6 +101,18 @@
     --color-accent-2: var(--color-defense-accent-2);
 }
 
+/* Contact-form honeypot. Positioned off-screen rather than display:none or
+   visibility:hidden so form-filling bots still see and complete it. Kept out of
+   the accessibility tree with aria-hidden on the wrapper in the markup. */
+.honeypot-field {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 @layer base {
     body {
         font-family: var(--font-sans);

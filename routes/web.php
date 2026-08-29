@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,16 @@ Route::get('/founder', function () {
 Route::get('/credentials', function () {
     return view('credentials');
 })->name('credentials');
+
+Route::get('/contact', [ContactController::class, 'create'])->name('contact');
+
+Route::post('/contact', [ContactController::class, 'store'])
+    ->middleware('throttle:3,60')
+    ->name('contact.store');
+
+Route::get('/privacy', function () {
+    return view('privacy');
+})->name('privacy');
 
 Route::get('/migrate', function() {
     Artisan::call('migrate', ['--force' => true]);
