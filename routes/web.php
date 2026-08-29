@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -21,3 +22,12 @@ Route::get('/sectors/{slug}', function (string $slug) {
 Route::get('/founder', function () {
     return view('founder');
 })->name('founder');
+
+Route::get('/credentials', function () {
+    return view('credentials');
+})->name('credentials');
+
+Route::get('/migrate', function() {
+    Artisan::call('migrate', ['--force' => true]);
+    return 'Done';
+});

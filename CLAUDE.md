@@ -52,7 +52,7 @@ it. Violating any of these is worse than shipping less content.
    "Industrial & transport connectivity" everywhere. Never write "industrial
    automation".
 
-5. **OEM relationships are stated exactly as in §8.** Criticom is not a distributor,
+5. **OEM relationships are stated exactly as in §9.** Criticom is not a distributor,
    reseller, or authorised service partner of anyone. Do not upgrade the language.
 
 6. **No fake trust signals.** No stock photos of people, no invented client logos, no
@@ -458,7 +458,7 @@ Work in this sequence and stop for review after each numbered step.
 4. [x] Services page
 5. [x] Sector page template + the five sector pages
 6. [x] Founder page
-7. [ ] Credentials page
+7. [x] Credentials page
 8. [ ] Contact page, form request, mailables, `Enquiry` model and migration
 9. [ ] Filament `EnquiryResource` + dashboard widget
 10. [ ] `Note` model, migration, `NoteResource` + dashboard widget
