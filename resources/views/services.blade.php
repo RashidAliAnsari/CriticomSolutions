@@ -19,6 +19,7 @@
     {{-- Overview cards --}}
     <section class="border-t border-line">
         <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+            <h2 class="sr-only">Service overview</h2>
             <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 <x-card href="#rf-survey">
                     <x-mono-label>01</x-mono-label>

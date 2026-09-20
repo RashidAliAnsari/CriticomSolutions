@@ -124,4 +124,15 @@
         outline: 2px solid var(--color-accent);
         outline-offset: 2px;
     }
+
+    /* --color-accent never appears on a dark background (see CLAUDE.md §4) —
+       interactive elements inside a dark surface get the accent-2 focus ring
+       instead. Kept as a blanket rule in @layer base rather than repeated
+       utility overrides so it applies uniformly and stays in the layer
+       Tailwind's utilities always win against if a component needs to
+       override it further. */
+    .bg-ink :focus-visible,
+    .bg-deep :focus-visible {
+        outline-color: var(--color-accent-2);
+    }
 }

@@ -1,5 +1,5 @@
 <header class="sticky top-0 z-40 border-b border-line bg-paper">
-    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6 md:flex-nowrap">
         <a href="/" class="text-lg font-bold tracking-tight text-ink">
             Criticom
         </a>
@@ -27,7 +27,7 @@
                 <li><a href="/services" class="text-ink hover:text-accent">Services</a></li>
                 <li class="relative">
                     <details>
-                        <summary class="list-none text-ink hover:text-accent [&::-webkit-details-marker]:hidden">
+                        <summary aria-haspopup="true" class="cursor-pointer list-none text-ink hover:text-accent [&::-webkit-details-marker]:hidden">
                             Sectors
                         </summary>
                         <ul class="mt-2 flex flex-col gap-2 border-l border-line pl-4 md:absolute md:mt-3 md:min-w-64 md:border md:border-line md:bg-paper md:p-3 md:pl-3">

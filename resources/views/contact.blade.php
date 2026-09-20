@@ -69,9 +69,10 @@
                                 name="company"
                                 value="{{ old('company') }}"
                                 class="mt-3 w-full border bg-paper px-4 py-3 text-body {{ $errors->has('company') ? 'border-red-600' : 'border-line' }}"
+                                @error('company') aria-invalid="true" aria-describedby="company-error" @enderror
                             >
                             @error('company')
-                                <p class="mt-2 text-sm text-red-700">{{ $message }}</p>
+                                <p id="company-error" class="mt-2 text-sm text-red-700">{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -99,9 +100,10 @@
                                 name="phone"
                                 value="{{ old('phone') }}"
                                 class="mt-3 w-full border bg-paper px-4 py-3 text-body {{ $errors->has('phone') ? 'border-red-600' : 'border-line' }}"
+                                @error('phone') aria-invalid="true" aria-describedby="phone-error" @enderror
                             >
                             @error('phone')
-                                <p class="mt-2 text-sm text-red-700">{{ $message }}</p>
+                                <p id="phone-error" class="mt-2 text-sm text-red-700">{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -111,6 +113,7 @@
                                 id="sector"
                                 name="sector"
                                 class="mt-3 w-full border bg-paper px-4 py-3 text-body {{ $errors->has('sector') ? 'border-red-600' : 'border-line' }}"
+                                @error('sector') aria-invalid="true" aria-describedby="sector-error" @enderror
                             >
                                 <option value="" @selected(old('sector', '') === '')>Not sure / general enquiry</option>
                                 @foreach (config('site_sectors') as $sector)
@@ -120,7 +123,7 @@
                                 @endforeach
                             </select>
                             @error('sector')
-                                <p class="mt-2 text-sm text-red-700">{{ $message }}</p>
+                                <p id="sector-error" class="mt-2 text-sm text-red-700">{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -135,14 +138,14 @@
                                 class="mt-3 w-full border bg-paper px-4 py-3 text-body {{ $errors->has('message') ? 'border-red-600' : 'border-line' }}"
                                 @error('message') aria-invalid="true" aria-describedby="message-error" @enderror
                             >{{ old('message') }}</textarea>
-                            <p class="mt-2 text-xs text-body/70">Minimum 20 characters.</p>
+                            <p class="mt-2 text-xs text-body/80">Minimum 20 characters.</p>
                             @error('message')
                                 <p id="message-error" class="mt-2 text-sm text-red-700">{{ $message }}</p>
                             @enderror
                         </div>
                     </div>
 
-                    <p class="mt-8 max-w-lg text-xs text-body/70">
+                    <p class="mt-8 max-w-lg text-xs text-body/80">
                         By submitting this form you agree to our
                         <a href="/privacy" class="text-accent hover:text-ink">privacy notice</a>.
                     </p>

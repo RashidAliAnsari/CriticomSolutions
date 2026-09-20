@@ -1,6 +1,28 @@
 <x-layout
     description="Independent engineering consultancy for mission-critical wireless. RF, spectrum and communications systems for energy, defense, industrial and telecom clients — no OEM allegiance."
 >
+    {{-- Organization JSON-LD — facts from CLAUDE.md §5 only, nothing invented. --}}
+    @push('head')
+        <script type="application/ld+json">
+            {{-- Blade compiles a bare "@context" as its own directive even inside
+                 this string literal, so it must be escaped with "@@". --}}
+            {!! json_encode([
+                '@@context' => 'https://schema.org',
+                '@type' => 'Organization',
+                'name' => 'Criticom Solutions',
+                'legalName' => 'Criticom Solutions',
+                'url' => url('/'),
+                'email' => 'support@criticom.net',
+                'telephone' => '+923053555440',
+                'address' => [
+                    '@type' => 'PostalAddress',
+                    'addressLocality' => 'Lahore',
+                    'addressCountry' => 'PK',
+                ],
+            ], JSON_UNESCAPED_SLASHES) !!}
+        </script>
+    @endpush
+
     {{-- 1. Hero --}}
     <section class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
         <x-mono-label>Independent engineering consultancy</x-mono-label>

@@ -463,6 +463,6 @@ Work in this sequence and stop for review after each numbered step.
 9. [x] Filament `EnquiryResource` + dashboard widget
 10. [x] `Note` model, migration, `NoteResource` + dashboard widget
 11. [x] Security middleware, headers, rate limiting, robots, sitemap
-12. [ ] Accessibility and responsive pass — includes fixing the mobile hamburger menu (broken as of step 3)
+12. [x] Accessibility and responsive pass — includes fixing the mobile hamburger menu (broken as of step 3)
 
 After each step, list any `[TODO:]` markers you left so the developer can collect them.

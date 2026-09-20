@@ -66,7 +66,7 @@
 
                 <div class="border-t border-line pt-4">
                     <h3 class="font-semibold text-ink">Redline Communications</h3>
-                    <p class="mt-1 text-xs text-body/70">Acquired by Aviat Networks</p>
+                    <p class="mt-1 text-xs text-body/80">Acquired by Aviat Networks</p>
                     <ul class="mt-3 space-y-3 text-sm text-body">
                         <li>Technical Sales Manager and Resident Engineer, Shell Brunei</li>
                         <li>Project Engineer, across Oman, UAE and Brunei</li>

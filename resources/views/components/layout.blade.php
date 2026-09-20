@@ -25,6 +25,8 @@
     @endif
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    @stack('head')
 </head>
 <body class="flex min-h-screen flex-col bg-paper text-body antialiased {{ $bodyClass }}">
     <a
