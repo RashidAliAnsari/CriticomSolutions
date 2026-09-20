@@ -461,7 +461,7 @@ Work in this sequence and stop for review after each numbered step.
 7. [x] Credentials page
 8. [x] Contact page, form request, mailables, `Enquiry` model and migration
 9. [x] Filament `EnquiryResource` + dashboard widget
-10. [ ] `Note` model, migration, `NoteResource` + dashboard widget
+10. [x] `Note` model, migration, `NoteResource` + dashboard widget
 11. [ ] Security middleware, headers, rate limiting, robots, sitemap
 12. [ ] Accessibility and responsive pass — includes fixing the mobile hamburger menu (broken as of step 3)
 
