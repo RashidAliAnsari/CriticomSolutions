@@ -123,4 +123,17 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Migration route token
+    |--------------------------------------------------------------------------
+    |
+    | Guards the /migrate route (routes/web.php) — there is no artisan on
+    | shared hosting. Set MIGRATION_TOKEN in the server .env; not committed
+    | to .env.example on purpose.
+    |
+    */
+
+    'migration_token' => env('MIGRATION_TOKEN'),
+
 ];
